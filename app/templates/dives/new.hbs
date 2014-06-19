@@ -1,0 +1,35 @@
+<div class="modal">
+  <form {{action "save" on="submit"}}>
+    <h2>New Dive</h2>
+    <div class="two-column">
+      <div class="input-container">
+        <label for="title">Title</label>
+        {{input value=title id="title" type="text" placeholder="Blue Hole" autofocus="true"}}
+      </div>
+
+      <div class="input-container">
+        <label for="location">Location</label>
+        {{input value=location id="location" type="text" placeholder="Belize"}}
+      </div>
+    </div>
+
+    <div class="two-column">
+      <div class="input-container">
+        <label for="date">Date</label>
+        {{input value=date id="date" type="text" placeholder="today"}}
+      </div>
+
+      <div class="input-container">
+        <label for="buddy">Buddy</label>
+        {{input value=buddy id="buddy" type="text" placeholder="Bilbo Baggins"}}
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label for="notes">Notes</label>
+      {{textarea value=notes id="notes" placeholder="Best dive ever!"}}
+    </div>
+
+    {{input type="submit" value="Save"}}
+  </form>
+</div>

@@ -1,0 +1,31 @@
+<h1>Dives</h1>
+{{#link-to 'dives.new' class='button'}}New Dive{{/link-to}}
+
+<table cellspacing="0">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th>Buddy</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each itemController="dive"}}
+      <tr>
+        <td>{{title}}</td>
+        <td>{{location}}</td>
+        <td>{{date}}</td>
+        <td>{{buddy}}</td>
+        <td>{{notes}}</td>
+      </tr>
+    {{else}}
+      <tr>
+        <td colspan="5">No dives.</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+{{outlet}}

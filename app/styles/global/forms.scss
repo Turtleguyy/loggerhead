@@ -1,0 +1,86 @@
+form {
+  position: relative;
+  padding: 2em;
+
+  h2 {
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid $brown;
+    font-size: 2.7em;
+    font-weight: 600;
+  }
+
+  .inputs, .actions {
+    &::after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+  }
+
+  div[class$=-column] {
+    margin-bottom: 2em;
+
+    &::after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+
+    .input-container {
+      float: left;
+      margin-bottom: 0;
+      margin-right: 5%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .three-column .input-container {
+    width: 30%;
+  }
+
+  .two-column .input-container {
+    width: 47.5%;
+  }
+
+  .input-container {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  label, input, textarea {
+    display: block;
+    font-size: 1.6em;
+  }
+
+  label {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+
+  input:not([type=submit]), textarea {
+    width: 100%;
+    padding: 0.5em;
+    @include border-radius(3px);
+    border: 1px solid darken($tan, 15%);
+
+    &:focus {
+      @include box-shadow($red 0 0 3px);
+      border-color: $red;
+    }
+  }
+
+  input[type=submit] {
+    top: 1.4em;
+    right: 1.4em;
+    position: absolute;
+  }
+
+  textarea {
+    height: 10em;
+    line-height: 1.5em;
+  }
+}
