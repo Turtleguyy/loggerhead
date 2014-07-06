@@ -1,0 +1,72 @@
+<div class="two-column">
+  <div class="input-container">
+    <label for="title">Dive Site</label>
+    {{input value=title id="title" type="text" placeholder="Blue Hole" autofocus="true"}}
+  </div>
+
+  <div class="input-container">
+    <label for="location">Location</label>
+    {{input value=location id="location" type="text" placeholder="Belize"}}
+  </div>
+</div>
+
+<div class="two-column">
+  <div class="input-container">
+    <label for="date">Date</label>
+    {{input value=date id="date" type="date" placeholder="today"}}
+  </div>
+
+  <div class="input-container">
+    <label for="time">Time</label>
+    {{input value=time id="time" type="time" placeholder="Bilbo Baggins"}}
+  </div>
+</div>
+
+<div class="two-column">
+  <div class="input-container">
+    <label for="maxDepth">Max Depth (in feet)</label>
+    {{input value=maxDepth id="maxDepth" type="number" placeholder="50"}}
+  </div>
+
+  <div class="input-container">
+    <label for="bottomTime">Bottom Time (in minutes)</label>
+    {{input value=bottomTime id="bottomTime" type="number" placeholder="30"}}
+  </div>
+</div>
+
+<div class="two-column">
+  <div class="input-container">
+    <label for="endingPSI">Ending PSI</label>
+    {{input value=endingPSI id="endingPSI" type="number" placeholder="500"}}
+  </div>
+
+  <div class="input-container">
+    <label for="temperature">Temperature</label>
+    {{input value=temperature id="temperature" type="number" placeholder="80"}}
+  </div>
+</div>
+
+<div class="two-column">
+  <div class="input-container">
+    <label for="nitrox">Nitrox Percentage</label>
+    {{input value=nitrox id="nitrox" type="text" placeholder="34.2"}}
+  </div>
+
+  <div class="input-container">
+    <label for="buddy">Buddy</label>
+    {{input value=buddy id="buddy" type="text" placeholder="Bilbo Baggins"}}
+  </div>
+</div>
+
+<div class="input-container">
+  <label for="notes">Notes</label>
+  {{textarea value=notes id="notes" placeholder="Best dive ever!"}}
+</div>
+
+<div class="actions">
+  {{input type="submit" value="Save"}}
+
+  {{#if id}}
+  <button class="delete" {{action "delete"}}>Delete</button>
+  {{/if}}
+</div>

@@ -1,0 +1,18 @@
+<div class="modal">
+  <form {{action "save" on="submit"}}>
+    <h2>New Diver</h2>
+    <div class="two-column">
+      <div class="input-container">
+        <label for="name">Name</label>
+        {{input value=name id="name" type="text" placeholder="Bilbo Baggins" autofocus="true"}}
+      </div>
+
+      <div class="input-container">
+        <label for="certification">Certification</label>
+        {{input value=certification id="certification" type="text" placeholder="Open Water Diver"}}
+      </div>
+    </div>
+
+    {{input type="submit" value="Save"}}
+  </form>
+</div>

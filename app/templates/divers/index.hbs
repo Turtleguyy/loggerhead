@@ -1,0 +1,24 @@
+{{#link-to 'divers.new' class='button'}}New Diver{{/link-to}}
+<h1>Divers</h1>
+
+<table cellspacing="0">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Certification</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each}}
+      <tr class="clickable" {{action 'show' this}}>
+        <td>{{name}}</td>
+        <td>{{certification}}</td>
+      </tr>
+    {{else}}
+      <tr>
+        <td colspan="2">No divers.</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

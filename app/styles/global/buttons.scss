@@ -5,7 +5,7 @@ a.button, button, input[type=submit] {
   @include appearance(none);
   @include border-radius(3px);
   @include box-shadow(rgba(255, 255, 255, 0.35) 0 1px 0 inset);
-  background: $red;
+  background: $blue;
   border: 1px solid rgba(0, 0, 0, 0.25);
   color: white;
   cursor: pointer;
@@ -14,11 +14,11 @@ a.button, button, input[type=submit] {
   line-height: 2.3em;
 
   &:hover, &:focus {
-    background: saturate($red, 25%);
+    background: saturate($blue, 25%);
   }
 
   &:active {
-    background: darken($red, 25%);
+    background: darken($blue, 25%);
     @include box-shadow(none);
   }
 
@@ -32,16 +32,16 @@ a.button, button {
 
   &.delete {
     background: #f0f0f0;
-    color: white;
+    color: $black;
 
     &:hover, &:focus {
-      background: #bf4040;
-      border: 1px solid darken(#bf4040, 15%);
+      background: $red;
+      color: white;
     }
 
     &:active {
-      background: darken(#f0f0f0, 50%);
-      border: 1px solid #c2c2c1;
+      background: darken($red, 25%);
+      @include box-shadow(none);
     }
   }
 }

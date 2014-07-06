@@ -1,23 +1,26 @@
-<h1>Dives</h1>
 {{#link-to 'dives.new' class='button'}}New Dive{{/link-to}}
+<h2>Dives</h2>
 
 <table cellspacing="0">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Buddy</th>
-      <th>Notes</th>
+      <th {{action "sort" ["title", "date", "time"]}}>Dive Site</th>
+      <th {{action "sort" ["location", "date", "time"]}}>Location</th>
+      <th {{action "sort" ["date", "time", "title"]}}>Date</th>
+      <th {{action "sort" ["maxDepth", "date", "time"]}}>Max Depth</th>
+      <th {{action "sort" ["bottomTime", "date", "time"]}}>Bottom Time</th>
+      <th {{action "sort" ["notes", "date", "time"]}}>Notes</th>
     </tr>
   </thead>
+
   <tbody>
-    {{#each itemController="dive"}}
-      <tr>
+    {{#each}}
+      <tr class="clickable" {{action 'edit' this}}>
         <td>{{title}}</td>
         <td>{{location}}</td>
         <td>{{date}}</td>
-        <td>{{buddy}}</td>
+        <td>{{maxDepth}} feet</td>
+        <td>{{bottomTime}} minutes</td>
         <td>{{notes}}</td>
       </tr>
     {{else}}

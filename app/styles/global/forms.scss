@@ -5,9 +5,10 @@ form {
   h2 {
     margin-bottom: 0.5em;
     padding-bottom: 0.5em;
-    border-bottom: 2px solid $brown;
+    border-bottom: 2px solid $tan;
     font-size: 2.7em;
     font-weight: 600;
+    line-height: 3.2rem;
   }
 
   .inputs, .actions {
@@ -68,15 +69,20 @@ form {
     border: 1px solid darken($tan, 15%);
 
     &:focus {
-      @include box-shadow($red 0 0 3px);
-      border-color: $red;
+      @include box-shadow($blue 0 0 3px);
+      border-color: $blue;
     }
   }
 
-  input[type=submit] {
+  .actions {
     top: 1.4em;
     right: 1.4em;
     position: absolute;
+
+    input[type=submit], button {
+      float: right;
+      margin-left: 1em;
+    }
   }
 
   textarea {
