@@ -24,7 +24,7 @@
     "express": "^4.1.1",
     "body-parser": "^1.2.0",
     "glob": "^3.2.9",
-    "broccoli-sass": "^0.2.0",
+    "broccoli-sass": "^0.2.1",
     "broccoli-coffee": "^0.1.0"
   }
 }
