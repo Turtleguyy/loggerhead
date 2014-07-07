@@ -1,34 +1,15 @@
-{{#link-to 'dives.new' class='button'}}New Dive{{/link-to}}
-<h2>Dives</h2>
+{{#link-to 'dives.new' class="card"}}
+  <p class="assisting-info icon plus"></p>
+  <h2>New Dive</h2>
+{{/link-to}}
 
-<table cellspacing="0">
-  <thead>
-    <tr>
-      <th {{action "sort" ["title", "date", "time"]}}>Dive Site</th>
-      <th {{action "sort" ["location", "date", "time"]}}>Location</th>
-      <th {{action "sort" ["date", "time", "title"]}}>Date</th>
-      <th {{action "sort" ["maxDepth", "date", "time"]}}>Max Depth</th>
-      <th {{action "sort" ["bottomTime", "date", "time"]}}>Bottom Time</th>
-      <th {{action "sort" ["notes", "date", "time"]}}>Notes</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    {{#each}}
-      <tr class="clickable" {{action 'edit' this}}>
-        <td>{{title}}</td>
-        <td>{{location}}</td>
-        <td>{{date}}</td>
-        <td>{{maxDepth}} feet</td>
-        <td>{{bottomTime}} minutes</td>
-        <td>{{notes}}</td>
-      </tr>
-    {{else}}
-      <tr>
-        <td colspan="5">No dives.</td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+{{#each}}
+  <div class="card dive" {{action 'edit' this}}>
+    <p class="assisting-info">{{maxDepth}}&prime;</p>
+    <h2>{{title}}</h2>
+  </div>
+{{else}}
+  <p>No dives.</p>
+{{/each}}
 
 {{outlet}}

@@ -7,6 +7,7 @@ Dive = DS.Model.extend
   maxDepth: DS.attr 'string'
   nitrox: DS.attr 'string'
   notes: DS.attr 'string'
+  startingPSI: DS.attr 'string'
   temperature: DS.attr 'string'
   time: DS.attr 'string'
   title: DS.attr 'string'
