@@ -19,10 +19,12 @@ function buildApp() {
   return app
 }
 
+var port = Number(process.env.PORT || 3000)
+
 if (require.main === module) {
   var app = buildApp()
-  app.listen(3000)
-  console.log('Loggerhead API running on :3000')
+  app.listen(port)
+  console.log('Loggerhead API running on port ' + port)
 }
 
 function routes () {
