@@ -14,11 +14,14 @@
   },
   "repository": "https://github.com/turtleguyy/loggerhead",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": "0.11.13"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+
+  },
+  "dependencies": {
     "ember-cli": "0.0.37",
     "originate": "0.1.5",
     "broccoli-ember-hbs-template-compiler": "^1.5.0",
@@ -26,9 +29,7 @@
     "body-parser": "^1.2.0",
     "glob": "^3.2.9",
     "broccoli-sass": "^0.2.0",
-    "broccoli-coffee": "^0.1.0"
-  },
-  "dependencies": {
+    "broccoli-coffee": "^0.1.0",
     "knex": "~0.6.20",
     "koa": "~0.8.1",
     "koa-bodyparser": "^1.0.1",
