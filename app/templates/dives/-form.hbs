@@ -13,28 +13,33 @@
 <div class="two-column">
   <div class="input-container">
     <label for="date">Date</label>
-    {{input value=date id="date" type="date" placeholder="today"}}
+    {{input value=date id="date" type="date" placeholder="07-20-2014"}}
   </div>
 
   <div class="input-container">
     <label for="time">Time</label>
-    {{input value=time id="time" type="time" placeholder="Bilbo Baggins"}}
+    {{input value=time id="time" type="time" placeholder="13:00"}}
   </div>
 </div>
 
 <div class="two-column">
   <div class="input-container">
-    <label for="maxDepth">Max Depth (in feet)</label>
+    <label for="maxDepth">Max Depth (ft)</label>
     {{input value=maxDepth id="maxDepth" type="number" placeholder="50"}}
   </div>
 
   <div class="input-container">
-    <label for="bottomTime">Bottom Time (in minutes)</label>
+    <label for="bottomTime">Bottom Time (min)</label>
     {{input value=bottomTime id="bottomTime" type="number" placeholder="30"}}
   </div>
 </div>
 
-<div class="two-column">
+<div class="three-column">
+  <div class="input-container">
+    <label for="startingPSI">Starting PSI</label>
+    {{input value=startingPSI id="startingPSI" type="number" placeholder="3000"}}
+  </div>
+
   <div class="input-container">
     <label for="endingPSI">Ending PSI</label>
     {{input value=endingPSI id="endingPSI" type="number" placeholder="500"}}

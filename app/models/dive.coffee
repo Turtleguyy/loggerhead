@@ -14,4 +14,17 @@ Dive = DS.Model.extend
 
   diver: DS.belongsTo 'diver'
 
+  psi: ( ->
+    start = this.get 'startingPSI'
+    end   = this.get 'endingPSI'
+    psi   = if start and end
+      "#{start} - #{end}"
+    else if start
+      start
+    else if end
+      end
+
+    return psi or false
+  ).property 'startingPSI', 'endingPSI'
+
 `export default Dive`

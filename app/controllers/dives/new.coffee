@@ -11,9 +11,9 @@ NewDiveController = Ember.ObjectController.extend
       }
 
     save:  ->
-      data = @getProperties 'bottomTime', 'buddy', 'date', 'endingPSI',
-                            'location', 'maxDepth', 'nitrox', 'notes',
-                            'temperature', 'time', 'title'
+      data = @getProperties 'bottomTime', 'buddy', 'date', 'startingPSI',
+                            'endingPSI', 'location', 'maxDepth', 'nitrox',
+                            'notes', 'temperature', 'time', 'title'
 
       dive = @store.createRecord 'dive', data
       dive.save()

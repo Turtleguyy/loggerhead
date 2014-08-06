@@ -1,12 +1,26 @@
+<!-- <h1>Total time underwater: {{bottomTime}}</h1>
+
+<hr /> -->
+
 {{#link-to 'dives.new' class="card"}}
-  <p class="assisting-info icon plus"></p>
-  <h2>New Dive</h2>
+  <h2>New Dive<i class="icon fish"></i></h2>
 {{/link-to}}
 
 {{#each}}
-  <div class="card dive" {{action 'edit' this}}>
-    <p class="assisting-info">{{maxDepth}}&prime;</p>
+  <div class="card dive">
+    <p class="assisting-info">{{maxDepth}}<i class="icon depth"></i></p>
     <h2>{{title}}</h2>
+    <div class="hover">
+      {{#if psi}}
+        <p>{{psi}}<i class="icon psi"></i></p>
+      {{/if}}
+
+      {{#if bottomTime}}
+        <p>{{bottomTime}}<i class="icon clock"></i></p>
+      {{/if}}
+
+      <h2 {{action 'edit' this}}>{{title}}<i class="icon edit"></i></h2>
+    </div>
   </div>
 {{else}}
   <p>No dives.</p>
